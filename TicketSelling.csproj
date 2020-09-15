@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA432213-3E6D-4424-B2BE-2B80D0A2469E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TicketSelling</RootNamespace>
+    <AssemblyName>TicketSelling</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlForm.Designer.cs">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\PaymentDAO.cs" />
+    <Compile Include="DAO\SeatDAO.cs" />
+    <Compile Include="DAO\TicketDAO.cs" />
+    <Compile Include="DAO\TripDAO.cs" />
+    <Compile Include="DTO\Payment.cs" />
+    <Compile Include="DTO\Ticket.cs" />
+    <Compile Include="DTO\Trip.cs" />
+    <Compile Include="fBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBill.Designer.cs">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChangePassword.Designer.cs">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fConfirm.Designer.cs">
+      <DependentUpon>fConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDriver.Designer.cs">
+      <DependentUpon>fDriver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDriverMana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDriverMana.Designer.cs">
+      <DependentUpon>fDriverMana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fInputInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fInputInfor.Designer.cs">
+      <DependentUpon>fInputInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMain.Designer.cs">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPayment.Designer.cs">
+      <DependentUpon>fPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuerry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuerry.Designer.cs">
+      <DependentUpon>fQuerry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSignUp.Designer.cs">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTrip.Designer.cs">
+      <DependentUpon>fTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUserFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUserFrame.Designer.cs">
+      <DependentUpon>fUserFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageForm.Designer.cs">
+      <DependentUpon>ManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="fTicketUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTicketUser.Designer.cs">
+      <DependentUpon>fTicketUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSearchTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSearchTicket.Designer.cs">
+      <DependentUpon>fSearchTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL.cs" />
+    <Compile Include="SQLException.cs" />
+    <Compile Include="UserMana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMana.Designer.cs">
+      <DependentUpon>UserMana.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ControlForm.resx">
+      <DependentUpon>ControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBill.resx">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChangePassword.resx">
+      <DependentUpon>fChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fConfirm.resx">
+      <DependentUpon>fConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDriver.resx">
+      <DependentUpon>fDriver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDriverMana.resx">
+      <DependentUpon>fDriverMana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fInputInfor.resx">
+      <DependentUpon>fInputInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMain.resx">
+      <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPayment.resx">
+      <DependentUpon>fPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuerry.resx">
+      <DependentUpon>fQuerry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSignUp.resx">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTrip.resx">
+      <DependentUpon>fTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUserFrame.resx">
+      <DependentUpon>fUserFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageForm.resx">
+      <DependentUpon>ManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="fTicketUser.resx">
+      <DependentUpon>fTicketUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSearchTicket.resx">
+      <DependentUpon>fSearchTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMana.resx">
+      <DependentUpon>UserMana.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
